@@ -95,6 +95,24 @@ def breaker_type(I,location="deepwater"):
     else:
         return "plunging"
 
+def reverse_shoal(H,T,h):
+    """
+    Compute offshore wave height by assuming conservation of energy flux E*class
+    Nielsen (2009) eqn. 1.7.5
+
+    Input:
+        H - Wave height in intermediate depth h (not breaking) [m]
+        T - Wave period [s]
+        h - Water depth associated with H [m]
+    Returns:
+        Ho - Wave height in deepwater [m]
+    """
+    w = 2*np.pi/T
+    kh = qkhfs(w,h)
+    Ks = 1./( np.sqrt(np.tanh(kh)*(1.+2.*kh/np.sinh(2.*kh))))
+    Ho = H/Ks
+    return Ho
+
 def ursell( Hs, T, h ):
     """
     Calculate Ursell number
