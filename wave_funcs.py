@@ -26,6 +26,14 @@ import matplotlib.pyplot as plt
 
 # In[16]:
 def wavelength_L(T, h):
+    """
+    Calculate depth-dependent wavelength
+    Input:
+       T - wave period [s]
+       h - water depth [m]
+    Returns:
+       L - wavelength [m]
+    """
     g = 9.81
     w = T/(2*np.pi)
     kh = qkhfs(w,h)
@@ -45,8 +53,8 @@ def iribarren(B, H, T, location="deepwater"):
        T - wave period [s]
        location - Either "deepwater" [default] or "breakpoint"
     Returns:
-      I - Iribarren number, dimensionless number
-      descr - description of breaker type (string)
+      I - Iribarren number, dimensionless number []
+      descr - description of breaker type [string]
     """
     g = 9.81
     Lo = (g*T**2)/(2*np.pi)
