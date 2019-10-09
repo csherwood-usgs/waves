@@ -2,6 +2,8 @@
 
 This repo is for developing and testing wave and maybe sediment transport functions.
 
+It lives in /crs/src/waves on my desktop.
+
 ### Main functions
 `wave_funcs.py` contain most of the callable functions. This will eventually become a package, but right now, just put
 ```#run -1 wave_funcs.py``` at the top of scripts that use the functions.
