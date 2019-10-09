@@ -21,7 +21,7 @@ This repo is for developing and testing wave and maybe sediment transport functi
 
 ```wave_assymtery.ipynb``` is a mispelled notebook used to develop the wave asymmetry calcs.
 
-###TODO
+### TODO
 
 * Rename and clean up wave_assymtery!
 
